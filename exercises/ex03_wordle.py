@@ -2,6 +2,7 @@
 
 __author__ = "730487405"
 
+
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 1
@@ -16,9 +17,10 @@ def main() -> None:
             winner = True
             message += (f"You won in {turns}/6 turns!")
         else:
-            message += (f"X/6 - Sorry, try again tomorrow!")
+            message += ("X/6 - Sorry, try again tomorrow!")
         turns += 1
     print(message)
+
 
 def contains_char(word: str, letter: str) -> bool:
     """Given a string, check to see if the letter is contained within in."""
@@ -31,6 +33,7 @@ def contains_char(word: str, letter: str) -> bool:
         else:
             count += 1
     return match
+
 
 def emojified(secret: str, guess: str) -> str:
     """Returns colored boxes to give hints to user."""
@@ -50,6 +53,7 @@ def emojified(secret: str, guess: str) -> str:
                 output += WHITE_BOX
         counter += 1
     return output
+
 
 def input_guess(expected: int) -> str:
     """Makes the user guess a word the same length as the secret word."""
