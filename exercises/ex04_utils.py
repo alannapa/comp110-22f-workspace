@@ -4,7 +4,7 @@ __author__ = "730487405"
 
 
 def all(haystack: list[int], needle: int) -> bool:
-    """Checks if one character is the same as the entire list"""
+    """Checks if one character is the same as the entire list."""
     i: int = 0
     if len(haystack) == 0:
         return False
@@ -20,20 +20,13 @@ def max(argument: list[int]) -> int:
     """Finds the maximum of a list without using max function."""
     if len(argument) == 0:
         raise ValueError("max() arg is an empty List")
-    m: int = 0
-    n: int = 1
+    n: int = 0
+    z: int = len(argument)-1
     while n < len(argument):
-        if argument[n] > argument[m]:
+        while argument[n] > argument[z]:
             n += 1
-            if argument[n] > argument [m]:
-                return argument[n]
-            else:
-                return argument [m]
-        else:
-            n += 1
-            if argument [n] > argument [0]:
-                return argument [n]
-            else: return argument[0]
+        n = argument[z]
+        return n
 
 
 def is_equal(first: list[int], second: list[int]) -> bool:
