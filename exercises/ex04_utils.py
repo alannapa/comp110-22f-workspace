@@ -20,19 +20,21 @@ def max(argument: list[int]) -> int:
     """Finds the maximum of a list without using max function."""
     if len(argument) == 0:
         raise ValueError("max() arg is an empty List")
-    n: int = 0
-    z: int = len(argument)-1
+    max_value = argument[0]
+    n: int = 1
     while n < len(argument):
-        while argument[n] > argument[z]:
+        if argument[n] > max_value:
+            max_value = argument[n]
+        else:
             n += 1
-        n = argument[z]
-        return n
+    return max_value
 
 
 def is_equal(first: list[int], second: list[int]) -> bool:
     """Checks that two lists match each other exactly."""
+    output: bool = True
     a: int = 0
-    while a < len(first) and len(second):
+    while a < len(first) or len(second):
         if first[a] == second[a]:
             a += 1
         else:
