@@ -32,10 +32,9 @@ def max(argument: list[int]) -> int:
 
 def is_equal(first: list[int], second: list[int]) -> bool:
     """Checks that two lists match each other exactly."""
-    output: bool = True
     a: int = 0
-    while a < len(first) or len(second):
-        if first[a] == second[a]:
+    while a < len(first) and len (second):
+        if first[a] is second[a]:
             a += 1
         else:
             return False
