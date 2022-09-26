@@ -65,8 +65,8 @@ def test_concat_1() -> list[int]:
 
 
 def test_concat_2() -> list[int]:
-    """Checks the results when one list is empty."""
-    x: list[int] = [1, 2, 3]
+    """Checks the results when both lists are empty."""
+    x: list[int] = []
     y: list[int] = []
     n: int = 0
     new_list: list[int] = []
@@ -78,7 +78,7 @@ def test_concat_2() -> list[int]:
         new_list.append(y[n])
         n += 1
     return new_list
-    assert concat == [1, 2, 3]
+    assert concat == []
 
 
 def test_concat_3() -> list[int]:
@@ -98,8 +98,8 @@ def test_concat_3() -> list[int]:
 
 
 def test_sub_1() -> list[int]:
-    """Tests the outcome is the indices of the arguments."""
-    a_list: list[int] = [10, 20, 30, 40]
+    """Tests the outcome is the indices of the arguments when the list is empty."""
+    a_list: list[int] = []
     a: int = 0
     z: int = 4
     if len(a_list) == 0 or a >= len(a_list) or z <= 0:
@@ -113,7 +113,7 @@ def test_sub_1() -> list[int]:
     outcome.append(a_list[a])
     outcome.append(a_list[z])
     return outcome
-    assert sub == [10, 40]
+    assert sub == []
 
 
 def test_sub_2() -> list[int]:
