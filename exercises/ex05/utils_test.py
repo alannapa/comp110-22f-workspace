@@ -6,7 +6,7 @@ __author__ = "730487405"
 from utils import only_evens, sub, concat
 
 
-def test_only_evens_1() -> None:
+def test_only_evens_1() -> list[int]:
     """Ensures that the outputted list contains only even integers."""
     argument: list[int] = [1, 2, 3, 4]
     i: int = 0
@@ -19,7 +19,7 @@ def test_only_evens_1() -> None:
     assert only_evens == [2, 4]
 
 
-def test_only_evens_2() -> None:
+def test_only_evens_2() -> list[int]:
     """Tests what happens when negative numbers are in the list."""
     argument: list[int] = [-1, -2, -3]
     i: int = 0
@@ -32,7 +32,7 @@ def test_only_evens_2() -> None:
     assert only_evens == [-2]
 
 
-def test_only_evens_3() -> None:
+def test_only_evens_3() -> list[int]:
     """Tests when argument is an empty list."""
     argument: list[int] = []
     i: int = 0
@@ -47,7 +47,7 @@ def test_only_evens_3() -> None:
     assert only_evens == []
 
 
-def test_concat_1() -> None:
+def test_concat_1() -> list[int]:
     """Checks results when the lists are different integers, same length."""
     x: list[int] = [1, 2, 3]
     y: list[int] = [4, 5, 6]
@@ -64,7 +64,7 @@ def test_concat_1() -> None:
     assert concat == [1, 2, 3, 4, 5, 6]
 
 
-def test_concat_2() -> None:
+def test_concat_2() -> list[int]:
     """Checks the results when one list is empty."""
     x: list[int] = [1, 2, 3]
     y: list[int] = []
@@ -81,7 +81,7 @@ def test_concat_2() -> None:
     assert concat == [1, 2, 3]
 
 
-def test_concat_3() -> None:
+def test_concat_3() -> list[int]:
     """Checks the result when the lists are the same integers and the same lengths."""
     x: list[int] = [1, 2, 3]
     y: list[int] = [1, 2, 3]
@@ -97,7 +97,7 @@ def test_concat_3() -> None:
     return concat == [1, 2, 3, 1, 2, 3]
 
 
-def test_sub_1() -> None:
+def test_sub_1() -> list[int]:
     """Tests the outcome is the indices of the arguments."""
     a_list: list[int] = [10, 20, 30, 40]
     a: int = 0
@@ -116,7 +116,7 @@ def test_sub_1() -> None:
     assert sub == [10, 40]
 
 
-def test_sub_2() -> None:
+def test_sub_2() -> list[int]:
     """Tests the results when the first index variable is negative."""
     a_list: list[int] = [10, 20, 30, 40]
     a: int = -1
@@ -135,7 +135,7 @@ def test_sub_2() -> None:
     assert sub == [10, 30]
 
 
-def test_sub_3() -> None:
+def test_sub_3() -> list[int]:
     """Tests the results when the second argument index is out of range."""
     a_list: list[int] = [10, 20, 30, 40]
     a: int = 0
