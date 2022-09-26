@@ -16,7 +16,7 @@ def test_only_evens_1() -> None:
             output.append(argument[i])
         i += 1
         return output
-    assert output == [2, 4]
+    assert only_evens == [2, 4]
 
 
 def test_only_evens_2() -> None:
@@ -29,7 +29,7 @@ def test_only_evens_2() -> None:
             output.append(argument[i])
         i += 1
         return output
-    assert output == [-2]
+    assert only_evens == [-2]
 
 
 def test_only_evens_3() -> None:
@@ -59,7 +59,7 @@ def test_concat_1() -> None:
         new_list.append(y[n])
         n += 1
     return new_list
-    assert new_list == [1, 2, 3, 4, 5, 6]
+    assert concat == [1, 2, 3, 4, 5, 6]
 
 
 def test_concat_2() -> None:
@@ -76,7 +76,7 @@ def test_concat_2() -> None:
         new_list.append(y[n])
         n += 1
     return new_list
-    assert new_list == [1, 2, 3]
+    assert concat == [1, 2, 3]
 
 
 def test_concat_3() -> None:
@@ -92,7 +92,7 @@ def test_concat_3() -> None:
     while n < len(y):
         new_list.append(y[n])
         n += 1
-    return new_list == [1, 2, 3, 1, 2, 3]
+    return concat == [1, 2, 3, 1, 2, 3]
 
 
 def test_sub_1() -> None:
@@ -111,7 +111,7 @@ def test_sub_1() -> None:
     outcome.append(a_list[a])
     outcome.append(a_list[z])
     return outcome
-    assert outcome == [10, 40]
+    assert sub == [10, 40]
 
 
 def test_sub_2() -> None:
@@ -130,7 +130,7 @@ def test_sub_2() -> None:
     outcome.append(a_list[a])
     outcome.append(a_list[z])
     return outcome
-    assert outcome == [10, 30]
+    assert sub == [10, 30]
 
 
 def test_sub_3() -> None:
@@ -149,4 +149,4 @@ def test_sub_3() -> None:
     outcome.append(a_list[a])
     outcome.append(a_list[z])
     return outcome
-    assert outcome == [10, 40]
+    assert sub == [10, 40]
