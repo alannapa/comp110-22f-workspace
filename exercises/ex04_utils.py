@@ -46,3 +46,4 @@ def is_equal(first: list[int], second: list[int]) -> bool:
         else:
             return False
     return True
+    

@@ -28,7 +28,7 @@ def concat(x: list[int], y: list[int]) -> list[int]:
     return new_list
 
 
-def sub_2(a_list: list[int], a: int, z: int) -> list[int]:
+def sub(a_list: list[int], a: int, z: int) -> list[int]:
     """Returns a list as a subset of the given list."""
     i: int = 0
     output: list[int] = []
