@@ -6,12 +6,6 @@ __author__ = "730487405"
 def invert(argument: dict[str, str]) -> dict[str, str]:
     """Inverts the key-value pairings for the inputted argument."""
     inverted_dict: dict[str, str] = {}
-    n: int = 0
-    while n < len(argument):
-        if argument[n] != argument[n+1]:
-            n + 1
-        else:
-            raise KeyError
     for key in argument:
         inverted_dict[argument[key]] = key
     return inverted_dict

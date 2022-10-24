@@ -59,7 +59,7 @@ def game() -> None:
 
 def point_check(money: int) -> int:
     """Checks a players' money accumulated."""
-    print("Money you've accumulated:")
+    print("Money you've accumulated: ")
     return n
 
 
